@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Comment Bot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f4; }
+        form { background: white; padding: 20px; border-radius: 5px; box-shadow: 0px 0px 10px gray; }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        textarea, input { width: 100%; padding: 10px; margin-top: 5px; }
+        button { background: blue; color: white; padding: 10px; margin-top: 15px; cursor: pointer; }
+        button:hover { background: darkblue; }
+    </style>
+</head>
+<body>
+    <h2>Facebook Auto Comment Bot</h2>
+    <form method="POST">
+        <label>Access Tokens (one per line)</label>
+        <textarea name="tokens" rows="4" required></textarea>
+
+        <label>Facebook Post ID</label>
+        <input type="text" name="post_id" required>
+
+        <label>Comments (one per line)</label>
+        <textarea name="comments" rows="4" required></textarea>
+
+        <label>Hater's Name</label>
+        <input type="text" name="haters_name" required>
+
+        <label>Delay (seconds)</label>
+        <input type="number" name="delay" min="1" required>
+
+        <button type="submit">Start Bot</button>
+    </form>
+</body>
+</html>
